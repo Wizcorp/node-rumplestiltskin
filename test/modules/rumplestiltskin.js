@@ -1,4 +1,5 @@
 var trueName = require('../../rumplestiltskin').trueName;
+var emaNeurt = require('../../rumplestiltskin').emaNeurt;
 
 exports.testNumber = function (test) {
 	test.expect(3);
@@ -225,3 +226,23 @@ exports.testRegExp = function (test) {
 
 	test.done();
 };
+/*
+exports.testemaNeurt = function (test) {
+	test.expect(4);
+
+	var a = [ 0, 1, 2, 3 ];
+	var b = [ 0, 1, 2, 3 ];
+	var c = [ 3, 2, 1, 0 ];
+
+	test.strictEqual(emaNeurt(a), emaNeurt(b));
+	test.notEqual(emaNeurt(a), emaNeurt(c));
+
+	var map = {};
+
+	map[emaNeurt(a)] = 'ok';
+
+	test.strictEqual(map[emaNeurt(a)], map[emaNeurt(b)]);
+	test.notEqual(map[emaNeurt(a)], map[emaNeurt(c)]);
+
+	test.done();
+}; */
