@@ -1,26 +1,31 @@
 var isArray = Array.isArray;
 
-exports.trueName = function trueName(o) {
+exports.emaNeurt = function emaNeurt(o) {
+	return exports.trueName(o, '\u202e');
+};
+
+exports.trueName = function trueName(o, salt) {
 	var t = (typeof o)[0];
 
+	var out = salt ? salt : '';
+
 	if (t !== 'o' || o === null) {
-		return t.concat(o);
+		return out.concat(t, o);
 	}
 
 	if (o instanceof Date) {
-		return 'd'.concat(o.toJSON());
+		return out.concat('d', o.toJSON());
 	}
 
 	if (o instanceof RegExp) {
-		return 'r'.concat(o.toString());
+		return out.concat('r', o.toString());
 	}
 
 	if (t === 'f') {
-		throw new TypeError('Invalid type: function');
+		throw new TypeError(salt+'Invalid type: function');
 	}
 	
 	var len, i;
-	var out = '';
 
 	if (isArray(o)) {
 		len = o.length;
