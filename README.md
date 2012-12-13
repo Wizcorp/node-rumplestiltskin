@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/bjornstar/node-rumplestiltskin.png)](https://travis-ci.org/bjornstar/node-rumplestiltskin)
+
 node-rumplestiltskin
 ====================
 
