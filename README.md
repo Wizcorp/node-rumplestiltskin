@@ -1,11 +1,16 @@
 node-rumplestiltskin
 ====================
 
-Reveal an object's true name.
+*Reveals an object's true name.*
+
+----
 
 Have you ever wanted to use an object as a key? If you know an object's true name you can.
 
 You're probably thinking, "Oh great, an object hashing function." But that's not what this does. Rumplestiltskin gives you a consistent string representation for an object so you can use it as a key in a map.
+
+Example
+=======
 
 ```javascript
 var trueName = require('rumplestiltskin').trueName;
@@ -30,6 +35,9 @@ console.log(getFromMap({ b: 1, a: '1' }));
 True names are not cheap. The larger, more complicated an object is, the higher the cost. When you want to know if two objects are equal, use a deepEqual function do not compare their true names.
 
 If you want a hash for objects, just feed true names into a hash function.
+
+Salt
+====
 
 As a bonus, Rumplestiltskin can also accept a salt to prepend to the true name this can come in handy if you want to differentiate between identical objects.
 
