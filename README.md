@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/Wizcorp/node-rumplestiltskin.png)](http://travis-ci.org/Wizcorp/node-rumplestiltskin)
+
 node-rumplestiltskin
 ====================
 
