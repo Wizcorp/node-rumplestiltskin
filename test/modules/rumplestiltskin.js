@@ -226,7 +226,7 @@ exports.testRegExp = function (test) {
 
 	test.done();
 };
-/*
+
 exports.testemaNeurt = function (test) {
 	test.expect(4);
 
@@ -245,4 +245,4 @@ exports.testemaNeurt = function (test) {
 	test.notEqual(map[emaNeurt(a)], map[emaNeurt(c)]);
 
 	test.done();
-}; */
+};
