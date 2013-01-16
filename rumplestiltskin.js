@@ -22,9 +22,9 @@ exports.trueName = function trueName(o, salt) {
 	}
 
 	if (t === 'f') {
-		throw new TypeError(salt+'Invalid type: function');
+		throw new TypeError('Invalid type: function');
 	}
-	
+
 	var len, i;
 
 	if (isArray(o)) {
@@ -43,6 +43,6 @@ exports.trueName = function trueName(o, salt) {
 		key = keys[i];
 		out = out.concat('o', key, trueName(o[key]));
 	}
-	
+
 	return out;
 };
