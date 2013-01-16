@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/bjornstar/node-rumplestiltskin.png)](https://travis-ci.org/bjornstar/node-rumplestiltskin)
+[![Build Status](https://secure.travis-ci.org/Wizcorp/node-rumplestiltskin.png)](http://travis-ci.org/Wizcorp/node-rumplestiltskin)
 
 node-rumplestiltskin
 ====================
