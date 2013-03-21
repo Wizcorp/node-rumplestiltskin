@@ -1,7 +1,7 @@
 {
     "name": "rumplestiltskin",
     "description": "Reveals an object's true name.",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "author": "Wizcorp, Inc. <info@wizcorp.jp>",
     "maintainers": [
         { "name": "Bjorn Stromberg", "email": "bstromberg@wizcorp.jp" }

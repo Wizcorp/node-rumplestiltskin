@@ -1,15 +1,11 @@
 {
-  "name": "tomes",
-  "repo": "bjornstar/tomes",
-  "description": "Evented Storage Agnostic Data API",
-  "version": "0.0.3",
-  "keywords": [ "data", "events" ],
-  "dependencies": {
-    "component/emitter": "*"
-  },
-  "development": {},
+  "name": "rumplestiltskin",
+  "repo": "wizcorp/node-rumplestiltskin",
+  "description": "Reveals an objects true name",
+  "version": "0.0.4",
+  "keywords": [ "hash", "json" ],
   "scripts": [
-    "tomes.js"
+    "rumplestiltskin.js"
   ],
-  "main": "tomes.js"
+  "main": "rumplestiltskin.js"
 }
