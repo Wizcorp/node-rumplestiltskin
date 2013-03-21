@@ -1,0 +1,11 @@
+{
+  "name": "rumplestiltskin",
+  "repo": "wizcorp/node-rumplestiltskin",
+  "description": "Reveals an objects true name",
+  "version": "0.0.4",
+  "keywords": [ "hash", "json" ],
+  "scripts": [
+    "rumplestiltskin.js"
+  ],
+  "main": "rumplestiltskin.js"
+}
