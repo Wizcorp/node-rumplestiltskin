@@ -4,10 +4,18 @@ exports.emaNeurt = function emaNeurt(o) {
 	return exports.trueName(o, '\u202e');
 };
 
-exports.trueName = function trueName(o, salt) {
-	var t = (typeof o)[0];
+exports.trueName = function trueName(obj, salt) {
+	var t = (typeof obj)[0];
 
 	var out = salt ? salt : '';
+
+	var o = obj;
+
+	if (t === 'o' && obj !== null) {
+		o = obj.valueOf();
+	}
+
+	t = (typeof o)[0];
 
 	if (t !== 'o' || o === null) {
 		return out.concat(t, o);
@@ -25,23 +33,18 @@ exports.trueName = function trueName(o, salt) {
 		throw new TypeError('Invalid type: function');
 	}
 
-	var len, i;
-
 	if (isArray(o)) {
-		len = o.length;
-		for (i = 0; i < len; i += 1) {
-			out = out.concat('a', i, trueName(o[i]));
-		}
-		return out;
+		t = 'a';
 	}
 
 	var keys, key;
 	keys = Object.keys(o);
-	len = keys.length;
+
 	keys.sort();
-	for (i = 0; i < len; i += 1) {
+
+	for (var i = 0; i < keys.length; i += 1) {
 		key = keys[i];
-		out = out.concat('o', key, trueName(o[key]));
+		out = out.concat(t, key, trueName(o[key]));
 	}
 
 	return out;

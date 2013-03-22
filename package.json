@@ -1,7 +1,7 @@
 {
     "name": "rumplestiltskin",
     "description": "Reveals an object's true name.",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "author": "Wizcorp, Inc. <info@wizcorp.jp>",
     "maintainers": [
         { "name": "Bjorn Stromberg", "email": "bstromberg@wizcorp.jp" }
@@ -11,7 +11,8 @@
     },
     "main": "rumplestiltskin.js",
     "devDependencies": {
-        "nodeunit": "*"
+        "nodeunit": "*",
+        "tomes": "*"
     },
     "license": {
         "type": "MIT",
