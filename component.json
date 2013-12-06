@@ -2,7 +2,7 @@
   "name": "rumplestiltskin",
   "repo": "wizcorp/node-rumplestiltskin",
   "description": "Reveals an objects true name",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "keywords": [ "hash", "json" ],
   "scripts": [
     "rumplestiltskin.js"
