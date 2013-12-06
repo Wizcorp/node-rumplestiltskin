@@ -66,3 +66,16 @@ exports.tomeComplex = function (test) {
 
 	test.done();
 };
+
+exports.tomeAsSalt = function (test) {
+	test.expect(1);
+
+	var obj = { a: 5 };
+	var a = 'abc';
+	var b = Tome.conjure(a);
+
+	test.strictEqual(trueName(obj, a), trueName(obj, b));
+
+	test.done();
+};
+
