@@ -6,8 +6,19 @@ exports.emaNeurt = function emaNeurt(o) {
 
 exports.trueName = function trueName(obj, salt) {
 	var t = (typeof obj)[0];
+	var out = '';
 
-	var out = salt ? salt : '';
+	if (salt) {
+		if (typeof salt === 'object') {
+			salt = salt.valueOf();
+		}
+
+		if (typeof salt !== 'string') {
+			throw new TypeError('Invalid type for salt: must be a string');
+		}
+
+		out = salt;
+	}
 
 	var o = obj;
 
