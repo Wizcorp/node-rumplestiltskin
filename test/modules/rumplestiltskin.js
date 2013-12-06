@@ -213,7 +213,7 @@ exports.testRegExp = function (test) {
 	var a = /rumplestiltskin/;
 	var b = /rumplestiltskin/;
 	var c = /ronbledore/;
-	
+
 	test.strictEqual(trueName(a), trueName(b));
 	test.notEqual(trueName(a), trueName(c));
 
@@ -246,3 +246,19 @@ exports.testemaNeurt = function (test) {
 
 	test.done();
 };
+
+exports.testObjectySalt = function (test) {
+	test.expect(1);
+
+	var obj = { a: 5 };
+
+	var a = 'imasalt';
+	var b = {
+		valueOf: function () { return a; }
+	};
+
+	test.strictEqual(trueName(obj, a), trueName(obj, b));
+
+	test.done();
+};
+
