@@ -262,3 +262,12 @@ exports.testObjectySalt = function (test) {
 	test.done();
 };
 
+exports.testObjectCreate = function (test) {
+	test.expect(1);
+
+	var obj = Object.create(null);
+	test.strictEqual(trueName(obj), '');
+
+	test.done();
+};
+

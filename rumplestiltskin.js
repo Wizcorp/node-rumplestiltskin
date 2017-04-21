@@ -9,7 +9,7 @@ exports.trueName = function trueName(obj, salt) {
 	var out = '';
 
 	if (salt) {
-		if (typeof salt === 'object') {
+		if (typeof salt === 'object' && salt.valueOf) {
 			salt = salt.valueOf();
 		}
 
@@ -22,8 +22,8 @@ exports.trueName = function trueName(obj, salt) {
 
 	var o = obj;
 
-	if (t === 'o' && obj !== null) {
-		o = obj.valueOf();
+	if (t === 'o' && o !== null && o.valueOf) {
+		o = o.valueOf();
 	}
 
 	t = (typeof o)[0];
